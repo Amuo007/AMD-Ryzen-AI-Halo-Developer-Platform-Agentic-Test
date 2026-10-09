@@ -1,0 +1,13 @@
+{
+  "name": "forge",
+  "version": "1.0.0",
+  "description": "A Claude Code–style coding agent with a web UI",
+  "main": "bin/forge.js",
+  "type": "module",
+  "scripts": {
+    "start": "node bin/forge.js",
+    "test": "node --test"
+  },
+  "author": "",
+  "license": "MIT"
+}
