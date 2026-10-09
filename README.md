@@ -1,1 +1,1 @@
-# AMD-Ryzen-AI-Halo-Developer-Platform-Agentic-Test
+Agentic - Nemotron Super 3 120B-A12 Q4-K-M
