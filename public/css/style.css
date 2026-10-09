@@ -1,0 +1,144 @@
+:root {
+    --bg-dark: #1e1e1e;
+    --bg-darker: #252526;
+    --bg-light: #f0f0f0;
+    --bg-lighter: #ffffff;
+    --fg-dark: #ffffff;
+    --fg-light: #000000;
+    --accent: #0e639c;
+    --accent-hover: #1177bb;
+    --border: #3c3c3c;
+}
+
+body.dark {
+    background: var(--bg-dark);
+    color: var(--fg-dark);
+}
+
+body.light {
+    background: var(--bg-light);
+    color: var(--fg-light);
+}
+
+header {
+    background: var(--bg-darker);
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    height: calc(100vh - 60px);
+}
+
+sidebar {
+    width: 250px;
+    background: var(--bg-darker);
+    border-right: 1px solid var(--border);
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+.chat-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#input-area {
+    display: flex;
+    gap: 0.5rem;
+    padding: 1rem;
+    border-top: 1px solid var(--border);
+}
+
+#input {
+    flex: 1;
+    padding: 0.5rem;
+    background: var(--bg-darker);
+    border: 1px solid var(--border);
+    color: var(--fg-dark);
+    border-radius: 4px;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background: var(--accent);
+    border: none;
+    color: var(--fg-dark);
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background: var(--accent-hover);
+}
+
+/* Tool card styles */
+.tool-card {
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    margin: 0.5rem 0;
+    overflow: hidden;
+}
+.tool-card-header {
+    background: var(--bg-darker);
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tool-card-body {
+    padding: 1rem;
+    background: var(--bg-dark);
+}
+.tool-card.collapsed .tool-card-body {
+    display: none;
+}
+.tool-card-toggle {
+    background: none;
+    border: none;
+    color: var(--fg-dark);
+    cursor: pointer;
+}
+.tool-card-toggle:hover {
+    text-decoration: underline;
+}
+.preview-box {
+    border: 1px solid var(--border);
+    padding: 0.5rem;
+    font-family: monospace;
+    white-space: pre-wrap;
+    max-height: 200px;
+    overflow-y: auto;
+}
+.diff-added {
+    background-color: #2d4a2d;
+    color: #a8f0a8;
+    display: inline-block;
+    width: 100%;
+    margin: 2px 0;
+}
+.diff-removed {
+    background-color: #4a2d2d;
+    color: #f0a8a8;
+    display: inline-block;
+    width: 100%;
+    margin: 2px 0;
+}
+.diff-context {
+    color: inherit;
+    display: inline-block;
+    width: 100%;
+    margin: 2px 0;
+}
